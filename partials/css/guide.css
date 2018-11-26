@@ -1,0 +1,87 @@
+/* ==========================================================================
+   Guide widget Styles
+   ========================================================================== */
+
+/*
+ * Modal Styles
+ */
+.guide-modal {
+  color: #fff;
+}
+
+.guide-modal .modal-header {
+  border: none;
+  padding: 0
+}
+
+.guide-modal .close {
+  color: #fff;
+  font-weight: 500;
+  position: absolute;
+  right: 4px;
+}
+
+.guide-modal p {
+  font-weight: 500;
+}
+
+.guide-modal .modal-footer {
+  display: block;
+  border: none;
+}
+
+#guideModal input {
+  margin: 0 auto;
+  max-width: 325px;
+}
+
+.guide-modal .modal-footer .btn {
+  font-size: 1rem;
+  margin-top: 15px;
+  width: auto;
+}
+
+.guide-modal .close:not(:disabled):not(.disabled):focus, .guide-modal .close:not(:disabled):not(.disabled):hover {
+  color: #fff;
+}
+
+.guide-modal .modal-body, .guide-modal .modal-footer {
+  background-color: #45c4d1;
+}
+
+#block3, #block4 {
+  display: none;
+}
+
+/*
+ * Loader
+ */
+.loader-block {
+  margin-top: 15px;
+  display: none;
+}
+
+.loader-block span {
+  vertical-align: middle;
+  line-height: 35px;
+  display: inline-block;
+  height: 43px;
+}
+
+ .loader {
+  border: 4px solid #f3f3f3;
+  border-radius: 50%;
+  border-top: 4px solid #3498db;
+  display: inline-block;
+  margin-bottom: -4px;
+  margin-right: 4px;
+  width: 30px;
+  height: 30px;
+  -webkit-animation: spin 2s linear infinite;
+  animation: spin 2s linear infinite;
+ }
+
+ @keyframes spin {
+     0% { transform: rotate(0deg); }
+     100% { transform: rotate(360deg); }
+ }
