@@ -27,9 +27,9 @@
 
   <!-- Add your site or application content here -->
 
-  <header>
-
-  </header>
+  <?php
+    include '/partials/header.php';
+  ?>
 
   <main id="content" role="main" class="text-center main-content">
     <div class="bg-img-hero" style="background-image: url(img/banner-qui-sommes-nous.jpg)">

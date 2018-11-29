@@ -2,7 +2,7 @@
   <div class="row align-items-lg-center bg-lighter-blue no-gutters">
     <div class="col-lg">
       <div>
-        <img class="img-fluid" src="img/guide-annuel-2019.jpg" alt="Guide annuel 2019 - Impôts et patrimoine" />
+        <img class="img-fluid" src="img/guide-annuel-2019.jpg" alt="Guide annuel 2019 - Impôts et patrimoine" width="100%" />
       </div>
     </div>
     <div class="col-lg">
