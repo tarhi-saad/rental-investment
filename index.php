@@ -14,7 +14,7 @@
 
   <link rel="stylesheet" href="css/normalize.css">
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
-  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/main.css?v=1.1">
   <link rel="stylesheet" href="partials/css/guide.css">
   <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,700" rel="stylesheet">
 
@@ -156,86 +156,9 @@
       include '/partials/guide.php';
     ?>
 
-    <div class="bg-grey-custom-v2 notre-objectif-block page-block">
-      <div class="container objectif-inner">
-        <div class="row">
-          <div class="col title">
-            <h2 class="h2-title">Notre objectif ?</h2>
-          </div>
-        </div>
-        <div class="row justify-content-between">
-          <div class="col-lg card-v2-block">
-            <div class="card card-v2 colored-line-after bg-dark-blue-after-before">
-              <img class="card-img-top" src="img/proteger-votre-famille.jpg" alt="Protéger votre famille - investissement locatif">
-              <div class="card-body bg-dark-blue align-items-lg-center">
-                <p class="card-text text-white">
-                  Vos sécurisez vos proches en leur léguant un bien à la valeur
-                  croissante, financé par un prêt couvert par l’assurance
-                  décès-invalidité. En cas d’accident de la vie, votre famille
-                  hérite d’un bien totalement payé et peut en jouir à sa
-                  convenance.
-                </p>
-              </div>
-              <div class="card-footer bg-white dark-blue">
-                <h3 class="card-title">Protéger votre famille</h3>
-              </div>
-            </div>
-          </div>
-          <div class="col-lg card-v2-block">
-            <div class="card card-v2 colored-line-after bg-lighter-blue-after-before">
-              <img class="card-img-top" src="img/preparer-votre-retraite.jpg" alt="Préparer votre retraite - investissement locatif">
-              <div class="card-body bg-lighter-blue align-items-lg-center">
-                <p class="card-text text-white">
-                  L’incertitude plane sur l’avenir des régimes de retraite. Le
-                  placement immobilier vous permet d’être assuré de jouir d’un
-                  capital pour vivre votre retraite comme vous le souhaitez ou
-                  de bénéficier de revenus complémentaires via la location du
-                  bien.
-                </p>
-              </div>
-              <div class="card-footer bg-white dark-blue">
-                <h3 class="card-title">Préparer votre retraite</h3>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="row justify-content-between">
-          <div class="col-lg card-v2-block">
-            <div class="card card-v2 colored-line-after bg-light-blue-after-before">
-              <img class="card-img-top" src="img/envisager-avenir.jpg" alt="Envisager l'avenir avec sérénité - investissement locatif">
-              <div class="card-body bg-light-blue align-items-lg-center">
-                <p class="card-text text-white">
-                  A terme, vous devenez propriétaire d’un logement que vous
-                  pouvez revendre, habiter, ou mettre en location. Une fois le
-                  crédit réglé, cet investissement vous garantit une rente
-                  mensuelle. Votre capital est en évolution constante et votre
-                  pouvoir d’achat augmente.
-                </p>
-              </div>
-              <div class="card-footer bg-white dark-blue">
-                <h3 class="card-title">Envisager l'avenir avec sérénité</h3>
-              </div>
-            </div>
-          </div>
-          <div class="col-lg card-v2-block">
-            <div class="card card-v2 colored-line-after bg-light-orange-after-before">
-              <img class="card-img-top" src="img/garantir-revenu-locatif.jpg" alt="Garantir un revenu locatif - investissement locatif">
-              <div class="card-body bg-light-orange align-items-lg-center">
-                <p class="card-text text-white">
-                  Tous les logements acquis dans le cadre d’un investissement
-                  locatif sont gérés par le service location du Groupe, de la
-                  sélection des locataires, au recouvrement des loyers. Vous
-                  bénéficiez ainsi des meilleures garantis locatives du marché.
-                </p>
-              </div>
-              <div class="card-footer bg-white dark-blue">
-                <h3 class="card-title">Garantir un revenu locatif</h3>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
+    <?php
+      include '/partials/notre-objectif.php';
+    ?>
 
     <div class="container call-to-action page-block">
       <div class="row justify-content-between">
