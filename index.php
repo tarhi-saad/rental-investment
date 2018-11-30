@@ -14,8 +14,9 @@
 
   <link rel="stylesheet" href="css/normalize.css">
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
-  <link rel="stylesheet" href="css/main.css?v=1.1">
+  <link rel="stylesheet" href="css/main.css?v=<?php echo time(); ?>">
   <link rel="stylesheet" href="partials/css/guide.css">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
   <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,700" rel="stylesheet">
 
 </head>
@@ -178,64 +179,9 @@
     </div>
   </main>
 
-  <footer>
-    <div class="container">
-      <div class="row">
-        <div class="md-4">
-          <div class="footer-social">
-            <span>Suivez-nous</span>
-          </div>
-        </div>
-        <div class="md-4"></div>
-        <div class="md-4"></div>
-      </div>
-    </div>
-    <div class="container">
-      <div class="row">
-        <div class="col-md-3">
-          <div class="footer-widget simulateur-footer-links">
-            <div class="footer-title">Nos simulateurs</div>
-            <ul>
-              <li><a href="/simulation-investissement-locatif/simulation-loi-pinel-1/">Simulation investissement locatif pinel</a></li>
-              <li><a href="/simulation-investissement-locatif/fichier-excel-loi-pinel/">SIMULATION PINEL</a></li>
-              <li><a href="/simulation-investissement-locatif/comparateur-de-placements/">COMPARATEUR DE PLACEMENTS</a></li>
-            </ul>
-          </div>
-        </div>
-        <div class="col-md-3">
-          <div class="footer-widget">
-            <div class="footer-title">NOS GUIDES</div>
-            <ul>
-              <li><a href="/guides-de-l-investissement-locatif/guide-loi-pinel/">GUIDE LOI PINEL</a></li>
-              <li><a href="/guides-de-l-investissement-locatif/guide-lmnp/">GUIDE LMNP</a></li>
-              <li><a href="/guides-de-l-investissement-locatif/guide-investir-en-residence-de-tourisme/">INVESTIR EN RÉSIDENCE DE TOURISME</a></li>
-              <li><a href="/guides-de-l-investissement-locatif/guide-investir-en-residence-etudiante/">INVESTIR EN RÉSIDENCE ÉTUDIANTE</a></li>
-            </ul>
-          </div>
-        </div>
-        <div class="col-md-3">
-          <div class="footer-widget">
-            <div class="footer-title">A PROPOS</div>
-            <ul>
-              <li><a href="/contact/">CONTACT</a></li>
-              <li><a href="/confiance-invest-investissement-immobilier/">QUI SOMMES-NOUS ?</a></li>
-              <li><a href="/investir-dans-limmobilier/investissement-locatif-confiance-invest/">NOTRE OFFRE CLÉS EN MAIN</a></li>
-              <li><a href="/mentions-legales/">MENTIONS LÉGALES</a></li>
-              <li><a href="/politique-de-protection-des-donnees-personnelles/">POLITIQUE DE PROTECTION DES DONNÉES PERSONNELLES</a></li>
-              <li><a href="/politique-de-cookies/">POLITIQUE DE COOKIES</a></li>
-            </ul>
-          </div>
-        </div>
-        <div class="col-md-3">
-          <div class="footer-logo">
-            <a href="/">
-              <img src="img/logo-footer.png" class="img-fluid" alt="confiance invest - logo footer" />
-            </a>
-          </div>
-        </div>
-      </div>
-    </div>
-  </footer>
+  <?php
+    include '/partials/footer.php';
+  ?>
 
   <script src="js/vendor/modernizr-3.6.0.min.js"></script>
   <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
