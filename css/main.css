@@ -408,6 +408,51 @@ footer a {
   }
 }
 
+/*
+ * footer-bottom
+ */
+
+.footer-bottom {
+  background-color: #184381;
+  padding: 54px 0 36px;
+}
+
+.footer-bottom .footer-title {
+  color: #fff;
+  font-size: 18.74px;
+  font-weight: bold;
+  line-height: 23.43px;
+  margin-bottom: 4px;
+}
+
+.footer-bottom li {
+  padding-left: 8px;
+  position: relative;
+}
+
+.footer-bottom li::before {
+  color: #fff;
+  content: '>';
+  font-size: 10.93px;
+  left: 0;
+  position: absolute;
+  top: 7px;
+}
+
+.footer-bottom .footer-widget a:hover {
+  color: #fff;
+}
+
+.footer-bottom .footer-widget {
+  margin-bottom: 2rem;
+}
+
+@media (min-width: 768px) {
+  .footer-bottom .footer-widget {
+    margin-bottom: 0;
+  }
+}
+
  /* ==========================================================================
    Hero image block
    ========================================================================== */

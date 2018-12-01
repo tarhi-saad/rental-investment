@@ -29,8 +29,8 @@
   <div class="footer-bottom">
     <div class="container">
       <div class="row">
-        <div class="col-md-3">
-          <div class="footer-widget simulateur-footer-links">
+        <div class="col-md-4 col-xl">
+          <div class="footer-widget">
             <div class="footer-title">Nos simulateurs</div>
             <ul>
               <li><a href="/simulation-investissement-locatif/simulation-loi-pinel-1/">Simulation investissement locatif pinel</a></li>
@@ -39,7 +39,7 @@
             </ul>
           </div>
         </div>
-        <div class="col-md-3">
+        <div class="col-md-4 col-xl">
           <div class="footer-widget">
             <div class="footer-title">NOS GUIDES</div>
             <ul>
@@ -50,7 +50,7 @@
             </ul>
           </div>
         </div>
-        <div class="col-md-3">
+        <div class="col-md-4 col-xl">
           <div class="footer-widget">
             <div class="footer-title">A PROPOS</div>
             <ul>
@@ -63,8 +63,8 @@
             </ul>
           </div>
         </div>
-        <div class="col-md-3">
-          <div class="footer-logo">
+        <div class="col-xl-4">
+          <div class="footer-logo text-xl-right">
             <a href="/">
               <img src="img/logo-footer.png" class="img-fluid" alt="confiance invest - logo footer" />
             </a>
