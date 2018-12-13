@@ -149,13 +149,16 @@ body {
 }
 
 .header-top .simulation-header-btn a {
-  background-color: #1ba6cf;
+  background: #1ba6cf;
   border: 2px solid #1ba6cf;
   border-radius: 10px;
+  box-shadow: none;
+  font-family: inherit;
   font-size: 12px;
   font-weight: bold;
+  height: inherit;
   line-height: 14.77px;
-  margin-right: 10px;
+  margin: 0 10px 0 0;
   padding: 11px 13px;
   text-transform: uppercase;
 }
@@ -312,6 +315,16 @@ footer a {
   margin-left: 14px;
 }
 
+.footer-top .widget_wysija_cont .allmsgs .updated {
+  background-color: #1ba6cf;
+  border: none;
+  color: #fff;
+}
+
+.footer-top .widget_wysija_cont .allmsgs .updated li {
+  text-transform: capitalize;
+}
+
 .footer-top .wysija-input {
   background-color: #1ba6cf;
   border: 2px solid #fff;
@@ -367,6 +380,7 @@ footer a {
   cursor: pointer;
   font-weight: bold;
   height: 38px;
+  margin-top: 0;
   padding: 0 5px;
 }
 
@@ -857,6 +871,423 @@ li {
     margin-top: 0;
   }
 }
+
+/* ==========================================================================
+   Simulateur pinel page
+   ========================================================================== */
+
+/*
+ * Simulateur block
+ */
+@media (min-width: 992px) {
+  .bg-img-hero-simulateur {
+    height: auto;
+    padding-bottom: 25px;
+  }
+}
+
+.simulateur-block .page-title {
+  font-size: 22px;
+  line-height: 52.6px;
+}
+
+.simulateur-block .simulateur-30s {
+  font-weight: 200;
+  padding-left: 48px;
+  position: relative;
+}
+
+.simulateur-block .simulateur-30s::before {
+  background-image: url('../img/clock.png');
+  content: '';
+  height: 47px;
+  left: 0;
+  position: absolute;
+  width: 45px;
+}
+
+.simulateur-block .simulateur-form-block {
+  background-color: #fff;
+  border: 6px solid #1ba6cf;
+  border-radius: 30px;
+  min-height: 325px;
+  margin: 0 auto;
+  margin-bottom: 30px;
+  max-width: 487px;
+  padding: 40px 5px 35px;
+  position: relative;
+}
+
+@media (min-width: 576px) {
+  .simulateur-block .simulateur-form-block {
+    padding: 40px 64px 35px;
+  }
+}
+
+.etape-demarrer .demarrer-title {
+  color: #184381;
+  font-size: 18px;
+  font-weight: lighter;
+}
+
+.etape-demarrer .note {
+  color: #f8ad85;
+  font-size: 18px;
+  font-weight: lighter;
+}
+
+.etape-demarrer .note span {
+  font-weight: bold;
+}
+
+.etape-demarrer .btn-demarrer {
+  background: #1ba6cf;
+  border: 2px solid #1ba6cf;
+  border-radius: 30px;
+  box-shadow: none;
+  font-size: 18px;
+  font-weight: normal;
+  height: 55px;
+  margin: 50px 0;
+  width: 160px;
+}
+
+@media (min-width: 576px) {
+  .etape-demarrer .btn-demarrer {
+    width: 230px;
+  }
+}
+
+.etape-demarrer .btn-demarrer:hover,
+ .etape-demarrer .btn-demarrer:focus,
+  .etape-demarrer .btn-demarrer:not(:disabled):not(.disabled):active {
+    background-color: #fff;
+    border-color: #1ba6cf;
+    color: #1ba6cf;
+}
+
+.simulateur-block .privacy-message {
+  font-size: 12px;
+  font-weight: lighter;
+  margin: 0 auto;
+  max-width: 370px;
+}
+
+.simulateur-block .privacy-message a {
+  color: #fff;
+  font-weight: bold;
+}
+
+.simulateur-block form .etapes-title {
+  color: #f8ad85;
+  font-size: 17px;
+  font-weight: normal;
+  line-height: 41.85px;
+  margin-bottom: 30px;
+}
+
+.simulateur-block form .etapes-radio {
+  display: block;
+}
+
+.simulateur-block form .etapes-radio label {
+  background-color: #fff;
+  border: 2px solid #1ba6cf;
+  border-radius: 30px;
+  color: #1f3559;
+  font-size: 18px;
+  font-weight: bold;
+  height: 40px;
+  margin-bottom: 10px;
+  width: 160px;
+}
+
+.simulateur-block form .etapes-radio>.btn:not(:last-child):not(.dropdown-toggle),
+ .simulateur-block form .etapes-radio>.btn:not(:first-child) {
+   border-radius: 30px;
+ }
+
+.simulateur-block form .etapes-radio label span {
+  display: block;
+  font-size: 12px;
+  line-height: 13px;
+}
+
+.simulateur-block form .etapes-radio .btn-secondary:not(:disabled):not(.disabled).active,
+ .simulateur-block form .etapes-radio .btn-secondary:not(:disabled):not(.disabled):active,
+  .simulateur-block form .etapes-radio .show>.btn-secondary.dropdown-toggle {
+  background-color: #1ba6cf;
+  border-color: #1ba6cf;
+}
+
+.simulateur-block form .etapes-radio .btn-secondary:not(:disabled):not(.disabled).active:focus,
+ .simulateur-block form .etapes-radio .btn-secondary:not(:disabled):not(.disabled):active:focus,
+  .simulateur-block form .etapes-radio .show>.btn-secondary.dropdown-toggle:focus,
+   .simulateur-block form .etapes-radio .btn-secondary.focus {
+  box-shadow: 0 0 0 0.2rem rgb(130, 220, 247);
+}
+
+.loading-form-simulateur {
+  border: 2px solid #f8ad85;
+  border-radius: 10px;
+  height: 9px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 58px;
+  max-width: 322px
+}
+
+.loading-form-simulateur .loading-inner {
+  background-color: #f8ad85;
+  height: 5px;
+  width: 25%;
+}
+
+.btn-direction-simulation {
+  border-radius: 100%;
+  margin-top: -18.5px;
+  position: absolute;
+  top: 25px;
+  transition: all .15s ease-in-out;
+}
+
+@media (min-width: 576px) {
+  .btn-direction-simulation {
+    margin-top: -18.5px;
+    top: 50%;
+  }
+}
+
+.btn-direction-simulation:hover {
+  box-shadow: 0 0 0 0.1rem rgb(255, 212, 189);
+  cursor: pointer;
+  margin-top: -19.5px;
+}
+
+.btn-left-simulation {
+  display: none;
+  left: 5px;
+  transition: all .15s ease-in-out;
+}
+
+.btn-left-simulation:hover {
+  left: 6px;
+}
+
+.btn-right-simulation {
+  right: 5px;
+  transition: all .15s ease-in-out;
+}
+
+.btn-right-simulation:hover {
+  right: 6px;
+}
+
+.simulateur-block .increment-input {
+  margin-bottom: 80px;
+  margin-top: 49px;
+}
+
+.simulateur-block .increment-input .qty {
+  border: 2px solid #1ba6cf;
+  border-radius: 15px;
+  height: 55px;
+  margin: 0 6px;
+  max-width: 208px;
+}
+
+.simulateur-block .increment-input .qtyminus,
+  .simulateur-block .increment-input .qtyplus {
+  background-color: #f8ad85;
+  border: none;
+  border-radius: 100%;
+  color: #fff;
+  cursor: pointer;
+  font-size: 30px;
+  font-weight: bold;
+  height: 32px;
+  line-height: 1;
+  margin-top: 12px;
+  padding: 0;
+  width: 32px;
+}
+
+.simulateur-block .increment-input .qtyminus:focus,
+  .simulateur-block .increment-input .qtyplus:focus {
+  outline: none;
+}
+
+.simulateur-block .etape-5 input {
+  border: 2px solid #1ba6cf;
+  border-radius: 30px;
+  height: 40px;
+  margin-bottom: 11px;
+  max-width: 155px;
+}
+
+.simulateur-block .etape-5 p {
+  color: #184381;
+  font-size: 10px;
+  font-weight: normal;
+  max-width: 155px;
+}
+
+.simulateur-block .btn[type='submit'] {
+  background-color: #f8ad85;
+  border: 2px solid #f8ad85;
+  border-radius: 30px;
+  font-size: 17px;
+  height: 34px;
+  line-height: 1;
+  margin-bottom: 12px;
+  width: 126px;
+}
+
+.simulateur-block .btn[type='submit']:hover,
+ .simulateur-block .btn[type='submit']:active{
+  background-color: #fff;
+  border: 2px solid #f8ad85;
+  color: #f8ad85
+}
+
+.tab {
+  display: none;
+}
+
+/*
+ * Form error message
+ */
+.form-error {
+  background-color: #f2dede;
+  padding: 15px;
+  margin-bottom: 20px;
+  border: 1px solid #b94a48;
+  border-radius: 4px;
+  text-align: left;
+}
+
+div.form-error strong {
+  line-height: 140%;
+  color: #b94a48;
+  font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+  font-size: 14px;
+  font-weight: bold;
+  text-transform: none;
+}
+
+div.form-error ul {
+  margin-left: 25px;
+}
+
+div.form-error ul li {
+  line-height: 140%;
+  color: #b94a48;
+  font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+  font-size: 14px;
+  font-weight: normal;
+  text-transform: none;
+  list-style-type: disc;
+}
+
+/*
+ * Simulateur page content
+ */
+
+.title-simulateur-content {
+  color: #184381;
+  font-size: 30px;
+  font-weight: lighter;
+  margin-bottom: 95px;
+  position: relative;
+  text-transform: uppercase;
+}
+
+.title-simulateur-content.colored-line-after::after {
+  width: 76px;
+}
+
+.title-simulateur-content .sub-title {
+  color: #f8ad85;
+  font-size: 18px;
+}
+
+.simulateur-content .raison-block {
+  color: #184381;
+  font-size: 16px;
+  font-weight: lighter;
+  padding-left: 117px;
+  position: relative;
+  margin-bottom: 57px;
+}
+
+.simulateur-content .raison-block::before {
+  content: '';
+  height: 92px;
+  left: 0;
+  position: absolute;
+  top: -7px;
+  width: 92px;
+}
+
+.simulateur-content .raison-block-1::before {
+  background-image: url('../img/raison-30ans.png');
+}
+
+.simulateur-content .raison-block-2::before {
+  background-image: url('../img/raison-2.png');
+}
+
+.simulateur-content .raison-block-3::before {
+  background-image: url('../img/raison-3.png');
+}
+
+.simulateur-content .raison-block-4::before {
+  background-image: url('../img/raison-4.png');
+}
+
+.simulateur-content .raison-block-5::before {
+  background-image: url('../img/raison-5.png');
+}
+
+.simulateur-content .raison-block-6::before {
+  background-image: url('../img/raison-6.png');
+}
+
+.simulateur-content .raison-block-7::before {
+  background-image: url('../img/raison-7.png');
+}
+
+.simulateur-content .raison-block-8::before {
+  background-image: url('../img/raison-8.png');
+}
+
+/*
+ * Guide dark version
+ */
+
+.guide-dark .bg-lighter-blue {
+  background-color: #184381;
+}
+
+.guide-dark .telecharger-btn:hover,
+ .guide-dark .telecharger-btn:not(:disabled):not(.disabled):active {
+   color: #184381;
+ }
+
+.guide-dark .text-block .larger-size {
+  color: #f8ad85;
+}
+
+.guide-dark .guide-modal .modal-body, .guide-dark .guide-modal .modal-footer {
+  background-color: #184381;
+}
+
+.page-block.page-block-simulateur-content {
+  margin-bottom: 10px;
+}
+
+
+
 
 /* ==========================================================================
    Helper classes
