@@ -3,12 +3,12 @@
     <div class="container d-flex align-items-center">
       <div class="mr-auto">
         <a href="/">
-          <img alt="logo confiance invest header" src="img/logo-confiance-header.png" width="201" height="57">
+          <img alt="logo confiance invest header" src="img/logo-confiance-header-v3.png" class="logo-header">
         </a>
       </div>
       <div class="tel-number d-lg-flex align-items-center">
-        <span>N°</span>
-        <a href="tel:0482538917">04 82 53 89 17</a>
+        <span class="text">Appel<br>gratuit</span><span class="num">N°</span>
+        <a href="tel:0800711371">0800 71 13 71</a>
       </div>
       <div class="simulation-header-btn d-lg-flex align-items-center">
         <a href="/simulation-investissement-locatif/simulation-loi-pinel-3/"
@@ -23,7 +23,10 @@
         <button class="navbar-toggler" type="button" data-toggle="collapse"
          data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
           aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
+          <!-- <span class="navbar-toggler-icon"></span> -->
+          <div class="bar1"></div>
+          <div class="bar2"></div>
+          <div class="bar3"></div>
         </button>
 
         <div class="collapse navbar-collapse justify-content-center" id="navbarSupportedContent">
@@ -39,7 +42,7 @@
             <li class="nav-item"><a href="/contact/" class="nav-link">Contact</a></li>
           </ul>
           <ul class="navbar-nav simulation-link-mobile">
-            <li class="nav-item"><a href="tel:0482538917" class="nav-link">N° 04 82 53 89 17</a></li>
+            <li class="nav-item"><a href="tel:0800711371" class="nav-link">N° 0800 71 13 71</a></li>
             <li class="nav-item"><a href="/simulation-investissement-locatif/simulation-loi-pinel-3/" class="nav-link">Simulation gratuite (30 sec.)</a></li>
           </ul>
         </div>

@@ -10,7 +10,7 @@
         </div>
       </div>
       <div class="newsletter d-sm-flex align-items-center justify-content-center text-center">
-        <span>S'inscrire à la newsletter</span>
+        <span class="text">S'inscrire à la newsletter</span>
         <div class="widget_wysija_cont shortcode_wysija">
           <form id="form-wysija-shortcode5c0018e4e390b-1" method="post" action="#wysija" class="widget_wysija shortcode_wysija">
             <p class="wysija-paragraph">

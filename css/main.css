@@ -111,33 +111,58 @@ body {
  */
 
 .header-top {
-  padding: 17px 0 15px
+  padding: 17px 60px 15px 0;
+}
+
+@media (min-width: 576px) {
+  .header-top {
+    padding: 17px 0 15px;
+  }
+}
+
+.header-top a img {
+  height: auto;
+  width: 100%;
+}
+
+.header-top a .logo-header {
+  height: auto;
+  width: 201px;
 }
 
 .header-top .tel-number {
   background-color: #f8ad85;
   border-radius: 10px;
   display: none;
-  height: 40px;
+  height: 42px;
   margin-right: 30px;
-  width: 160px;
+  width: 172px;
 }
 
-.header-top .tel-number span {
+.header-top .tel-number .num {
   color: #fff;
-  font-size: 18.28px;
+  font-size: 21.27px;
   font-weight: bold;
-  line-height: 23.92px;
+  line-height: 27.84px;
+  padding: 0 5px 0 0;
+}
+
+.header-top .tel-number .text {
+  color: #fff;
+  font-size: 9px;
+  font-weight: bold;
   padding: 0 5px 0 12px;
+  text-align: right;
 }
 
 .header-top .tel-number a {
   background-color: #fff;
   border-radius: 0 8px 8px 0;
   color: #184381;
-  font-size: 12px;
+  font-size: 14px;
   font-weight: bold;
-  padding: 11px 21px 8px 18px;
+  letter-spacing: -0.022em;
+  padding: 9px 4px 9px 6px;
 }
 
 .header-top .tel-number a:hover {
@@ -238,10 +263,16 @@ body {
 }
 
 .header-nav .navbar-toggler {
-  background: #184381;
+  background: #fff;
+  margin: 15px 15px;
+  padding: 0;
   position: absolute;
   right: 5px;
   top: 5px;
+}
+
+.header-nav .navbar-toggler:focus {
+  outline: none;
 }
 
 .header-nav .simulation-link-mobile {
@@ -265,6 +296,32 @@ body {
   margin-bottom: 10px;
 }
 
+.bar1, .bar2, .bar3 {
+  background-color: #184381;
+  height: 5px;
+  margin: 8px 0;
+  pointer-events: none;
+  transition: 0.4s;
+  width: 40px;
+}
+
+/* Rotate first bar */
+.change .bar1 {
+  -webkit-transform: rotate(-45deg) translate(-9px, 10px) ;
+  transform: rotate(-45deg) translate(-9px, 10px) ;
+}
+
+/* Fade out the second bar */
+.change .bar2 {
+  opacity: 0;
+}
+
+/* Rotate last bar */
+.change .bar3 {
+  -webkit-transform: rotate(45deg) translate(-9px, -9px) ;
+  transform: rotate(45deg) translate(-9px, -9px) ;
+}
+
 /* ==========================================================================
   Footer styles
   ========================================================================== */
@@ -285,7 +342,7 @@ footer a {
   color: #fff;
   font-size: 12px;
   font-weight: bold;
-  padding: 22px 0;
+  padding: 27px 0 22px;
 }
 
 .footer-top .icons {
@@ -309,6 +366,10 @@ footer a {
 
 .footer-top .newsletter span, .footer-top .social span {
   letter-spacing: 0.031em;
+}
+
+.footer-top .newsletter span {
+  display: none;
 }
 
 .footer-top .newsletter > .shortcode_wysija {
@@ -420,6 +481,10 @@ footer a {
   .footer-top .wysija-submit {
     padding: 0 15px;
   }
+
+  .footer-top .newsletter .text {
+    display: inline-block;
+  }
 }
 
 /*
@@ -495,7 +560,6 @@ footer a {
 
 .breadcrumb {
   background-color: transparent;
-  padding-left: 0;
 }
 
 .breadcrumb-item {
@@ -889,6 +953,7 @@ li {
 .simulateur-block .page-title {
   font-size: 22px;
   line-height: 52.6px;
+  margin-bottom: 1.5rem;
 }
 
 .simulateur-block .simulateur-30s {
@@ -924,10 +989,88 @@ li {
   }
 }
 
+.simulateur-block .simulateur-form-block .btn-nav-simulation {
+  border: none;
+  bottom: 2px;
+  font-size: 14px;
+  font-weight: normal;
+  height: 38px;
+  position: absolute;
+  transition: all .07s;
+  width: 90px;
+}
+
+.simulateur-block .simulateur-form-block .btn-nav-simulation:focus,
+ .simulateur-block .simulateur-form-block .btn-nav-simulation:active,
+  .simulateur-block .simulateur-form-block .btn-nav-simulation:focus:active {
+  box-shadow: none;
+}
+
+.simulateur-block .simulateur-form-block .btn-nav-simulation.scale:hover {
+  transform: scale(1.03);
+}
+
+.simulateur-block .simulateur-form-block .btn-nav-simulation i {
+  font-size: 16px;
+  position: absolute;
+  top: 50%;
+  -ms-transform: translateY(-50%);
+  -webkit-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+
+.simulateur-block .simulateur-form-block .btn-retour i {
+  left: 15px;
+}
+
+.simulateur-block .simulateur-form-block .btn-valider i {
+  right: 15px;
+}
+
+.simulateur-block .simulateur-form-block .btn-retour {
+  background-color: #f8ad85;
+  border-radius: 0 0 0 23px;
+  display: none;
+  left: 3px;
+  padding-left: 40px
+}
+
+.simulateur-block .simulateur-form-block .btn-valider {
+  background-color: #1ba6cf;
+  border-radius: 0 0 23px 0;
+  padding-right: 40px;
+  right: 3px;
+}
+
+@media (min-width: 576px) {
+  .simulateur-block .simulateur-form-block .btn-nav-simulation {
+    width: 110px;
+  }
+
+  .simulateur-block .simulateur-form-block .btn-retour i {
+    left: 22px;
+  }
+
+  .simulateur-block .simulateur-form-block .btn-valider i {
+    right: 22px;
+  }
+}
+
+.simulateur-block .simulateur-form-block .btn-retour:not(:disabled):not(.disabled).active,
+ .simulateur-block .simulateur-form-block .btn-retour:not(:disabled):not(.disabled):active {
+  background-color: #f79c6b;
+}
+
+  .simulateur-block .simulateur-form-block .btn-valider:not(:disabled):not(.disabled).active,
+   .simulateur-block .simulateur-form-block .btn-valider:not(:disabled):not(.disabled):active {
+  background-color: #1295bb;
+}
+
 .etape-demarrer .demarrer-title {
   color: #184381;
   font-size: 18px;
   font-weight: lighter;
+  margin-top: 15px;
 }
 
 .etape-demarrer .note {
@@ -982,12 +1125,21 @@ li {
   color: #f8ad85;
   font-size: 17px;
   font-weight: normal;
-  line-height: 41.85px;
-  margin-bottom: 30px;
+  left: 50%;
+  line-height: 1;
+  margin-bottom: 20px;
+  position: absolute;
+  top: 35px;
+  -ms-transform: translateX(-50%);
+  -webkit-transform: translateX(-50%);
+  transform: translateX(-50%);
+  width: 100%;
 }
 
 .simulateur-block form .etapes-radio {
   display: block;
+  margin-bottom: 95px;
+  margin-top: 40px;
 }
 
 .simulateur-block form .etapes-radio label {
@@ -1030,11 +1182,18 @@ li {
 .loading-form-simulateur {
   border: 2px solid #f8ad85;
   border-radius: 10px;
+  bottom: 88px;
   height: 9px;
+  left: 50%;
   margin-left: auto;
   margin-right: auto;
   margin-top: 58px;
-  max-width: 322px
+  max-width: 322px;
+  position: absolute;
+  -ms-transform: translateX(-50%);
+  -webkit-transform: translateX(-50%);
+  transform: translateX(-50%);
+  width: 90%;
 }
 
 .loading-form-simulateur .loading-inner {
@@ -1055,6 +1214,10 @@ li {
   .btn-direction-simulation {
     margin-top: -18.5px;
     top: 50%;
+  }
+
+  .loading-form-simulateur {
+    width: 100%;
   }
 }
 
@@ -1085,7 +1248,7 @@ li {
 
 .simulateur-block .increment-input {
   margin-bottom: 80px;
-  margin-top: 49px;
+  margin-top: 59px;
 }
 
 .simulateur-block .increment-input .qty {
@@ -1117,6 +1280,11 @@ li {
   outline: none;
 }
 
+.simulateur-block .etape-5 .form-group {
+  margin-bottom: 5px;
+  margin-top: 29px;
+}
+
 .simulateur-block .etape-5 input {
   border: 2px solid #1ba6cf;
   border-radius: 30px;
@@ -1125,11 +1293,40 @@ li {
   max-width: 155px;
 }
 
+.simulateur-block .etape-5 input::-webkit-input-placeholder {
+  color: #c1c0c0;
+  font-size: 14px;
+  font-weight: lighter;
+}
+
+.simulateur-block .etape-5 input::-moz-placeholder {
+ color: #c1c0c0;
+ font-size: 14px;
+ font-weight: lighter;
+}
+
+.simulateur-block .etape-5 input:-ms-input-placeholder {
+  color: #c1c0c0;
+  font-size: 14px;
+  font-weight: lighter;
+}
+
+.simulateur-block .etape-5 input:-moz-placeholder {
+  color: #c1c0c0;
+  font-size: 14px;
+  font-weight: lighter;
+}
+
 .simulateur-block .etape-5 p {
   color: #184381;
-  font-size: 10px;
-  font-weight: normal;
+  font-size: 8px;
+  font-weight: lighter;
   max-width: 155px;
+}
+
+.simulateur-block .etape-5 p span {
+  display: block;
+  margin-top: 5px;
 }
 
 .simulateur-block .btn[type='submit'] {
@@ -1159,10 +1356,11 @@ li {
  */
 .form-error {
   background-color: #f2dede;
-  padding: 15px;
-  margin-bottom: 20px;
   border: 1px solid #b94a48;
   border-radius: 4px;
+  margin-bottom: 20px;
+  margin-top: 30px;
+  padding: 15px;
   text-align: left;
 }
 
@@ -1461,3 +1659,49 @@ div.form-error ul li {
       widows: 3;
     }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* IE - Start */
+@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+  #guideModal .modal-header img {
+    width: 498px;
+  }
+
+	.page-title-block::after {
+		left: 38px
+	}
+
+	.card-img-top {
+    min-height: 1px;
+  }
+
+	.objectif-inner .card-v2-block:nth-child(2), .call-to-action .col-lg:nth-child(2) {
+		margin-left: 50px;
+	}
+
+  #simulateurForm {
+    width: 100%;
+  }
+
+  .header-top .tel-number a {
+    padding: 9px 4px 9px 4px;
+  }
+}
+/* IE - END */

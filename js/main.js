@@ -1,14 +1,14 @@
-$(document).ready(function() {
+$(document).ready(function () {
   var guide;
   var tel;
   var label = false;
-  $('.sendlink').on('click', function() {
+  $('.sendlink').on('click', function () {
     $('#guide-modal').fadeIn(200);
     guide = $(this).attr('href');
     guide = guide.replace('#', '');
   });
 
-  $('#send-link').on('click', function() {
+  $('#send-link').on('click', function () {
     tel = $('#tel').val();
     tel = tel.replace(/ /g, '');
     tel = tel.replace(/-/g, '');
@@ -49,7 +49,7 @@ $(document).ready(function() {
     }
   }
 
-  $('#block4 a').click(function() {
+  $('#block4 a').click(function () {
     var account;
     var index;
     switch (guide) {
@@ -83,13 +83,13 @@ $(document).ready(function() {
     $('#block4,#block3,#block2').hide();
   });
 
-  $('#send-code').click(function() {
+  $('#send-code').click(function () {
     $('#block3').hide();
     $('#block2').show();
     $.post('/prostat/sendguide.php', {
       guide: guide,
       tel: tel,
-    }, function(data) {
+    }, function (data) {
       $('#block2').hide();
       console.log(data);
       data = $.parseJSON(data);
@@ -115,7 +115,8 @@ $(document).ready(function() {
           goog_report_conversion('/prostat/sendguide.php?tel=' + tel +
             '&guide=' + guide);
           if (typeof (data.simid) != 'undefined') $('body').
-          append('<img src="http://www.confiance-invest.fr/tracking/pixinf.php?i=827&t=conv&simid=' +
+          append(
+            '<img src="http://www.confiance-invest.fr/tracking/pixinf.php?i=827&t=conv&simid=' +
             data.simid + ' border="0" height="1" width="1" style="display:none;" />');
         }
       }
@@ -185,9 +186,34 @@ $(document).ready(function() {
     }
 
     if (n != 0 && n != 1) {
-      $('.btn-left-simulation').css('display', 'block');
+      $('#prevBtn').css('display', 'block');
     } else {
-      $('.btn-left-simulation').css('display', 'none');
+      $('#prevBtn').css('display', 'none');
+    }
+
+    var radioChecked1 = $('.etape-1 .etapes-radio input[type="radio"]').is(':checked');
+    var radioChecked2 = $('.etape-2 .etapes-radio input[type="radio"]').is(':checked');
+    if ((n == 1 && radioChecked1 == false) || (n == 2 && radioChecked2 == false)) {
+      $('#nextBtn').attr('disabled', true);
+      $('#nextBtn').removeClass('scale');
+    } else if ((n == 1 && radioChecked1 == true) || (n == 2 && radioChecked2 == true)) {
+      $('#nextBtn').attr('disabled', false);
+      $('#nextBtn').addClass('scale');
+    }
+
+    var incrementInput1 = $('.increment-input input[name="age"]').val();
+    if (n == 3 && incrementInput1 == '') {
+      $('#nextBtn').attr('disabled', true);
+      $('#nextBtn').removeClass('scale');
+    } else if (n == 3 && incrementInput1 != '') {
+      $('#nextBtn').attr('disabled', false);
+      $('#nextBtn').addClass('scale');
+    }
+
+    var incrementInput2 = $('.increment-input input[name="revenus"]').val();
+    if (n == 4 && incrementInput2 == '') {
+      $('#nextBtn').attr('disabled', true);
+      $('#nextBtn').removeClass('scale');
     }
 
     // if (n == (x.length - 1)) {
@@ -269,6 +295,77 @@ $(document).ready(function() {
     $('#nextBtn').show();
   });
 
+  $('.etapes-radio label.btn').click(function () {
+    $('#nextBtn').attr('disabled', false);
+    $('#nextBtn').addClass('scale');
+  });
+
+  $('.increment-input input[name="age"]').on('input', function () {
+    var incrementInput = $('.increment-input input[name="age"]').val();
+    if (incrementInput == '') {
+      $('#nextBtn').attr('disabled', true);
+      $('#nextBtn').removeClass('scale');
+    } else {
+      $('#nextBtn').attr('disabled', false);
+      $('#nextBtn').addClass('scale');
+    }
+  });
+
+  $('.increment-input input[name="revenus"]').on('input', function () {
+    var incrementInput = $('.increment-input input[name="revenus"]').val();
+    if (incrementInput == '') {
+      $('#nextBtn').attr('disabled', true);
+      $('#nextBtn').removeClass('scale');
+    } else {
+      $('#nextBtn').attr('disabled', false);
+      $('#nextBtn').addClass('scale');
+    }
+  });
+
+  $('.etape-3 .increment-input .qtyminus').click(function () {
+    var incrementInput = $('.increment-input input[name="age"]').val();
+    if (incrementInput == '') {
+      $('#nextBtn').attr('disabled', true);
+      $('#nextBtn').removeClass('scale');
+    } else {
+      $('#nextBtn').attr('disabled', false);
+      $('#nextBtn').addClass('scale');
+    }
+  });
+
+  $('.etape-3 .increment-input .qtyplus').click(function () {
+    var incrementInput = $('.increment-input input[name="age"]').val();
+    if (incrementInput == '') {
+      $('#nextBtn').attr('disabled', true);
+      $('#nextBtn').removeClass('scale');
+    } else {
+      $('#nextBtn').attr('disabled', false);
+      $('#nextBtn').addClass('scale');
+    }
+  });
+
+  $('.etape-4 .increment-input .qtyminus').click(function () {
+    var incrementInput = $('.increment-input input[name="revenus"]').val();
+    if (incrementInput == '') {
+      $('#nextBtn').attr('disabled', true);
+      $('#nextBtn').removeClass('scale');
+    } else {
+      $('#nextBtn').attr('disabled', false);
+      $('#nextBtn').addClass('scale');
+    }
+  });
+
+  $('.etape-4 .increment-input .qtyplus').click(function () {
+    var incrementInput = $('.increment-input input[name="revenus"]').val();
+    if (incrementInput == '') {
+      $('#nextBtn').attr('disabled', true);
+      $('#nextBtn').removeClass('scale');
+    } else {
+      $('#nextBtn').attr('disabled', false);
+      $('#nextBtn').addClass('scale');
+    }
+  });
+
   $.validate({
     form: '#simulateurForm',
     validateOnBlur: false, // disable validation when input looses focus
@@ -276,4 +373,25 @@ $(document).ready(function() {
     scrollToTopOnError: false, // Set this property to true on longer forms
     lang: 'fr',
   });
+
+  // Menu icon, toggle transform burger to X
+  document.addEventListener('click', function (event) {
+    // If the clicked element doesn't have the right selector, bail
+    if (!event.target.matches('.navbar-toggler')) return;
+
+    // Don't follow the link
+    event.preventDefault();
+
+    // add & remove class in synch with bootsrap's expanded attribute
+    if (event.target.getAttribute('aria-expanded') == 'true') {
+      event.target.classList.add('change');
+    } else {
+      event.target.classList.remove('change');
+    }
+  }, false);
+
+  // a polyfill for IE - Object does not support Element.matches()
+  if (!Element.prototype.matches) {
+    Element.prototype.matches = Element.prototype.msMatchesSelector;
+  }
 });

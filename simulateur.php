@@ -48,7 +48,7 @@
             Simulateur pinel
             <span class="simulateur-30s">30s</span><br />
           </h1>
-          <div class="simulateur-form-block">
+          <div class="simulateur-form-block d-flex justify-content-center">
             <div class="etape-demarrer tab">
               <div class="demarrer-title">Calculez votre réduction d'impôts</div>
               <button type="button" class="btn-demarrer btn btn-primary">Démarrer</button>
@@ -58,8 +58,8 @@
               <div class="etape-1 tab">
                 <div class="etapes-title">Votre situation familiale</div>
                 <div class="btn-group btn-group-toggle etapes-radio" data-toggle="buttons">
-                  <label class="btn btn-secondary mr-sm-2 active">
-                    <input type="radio" name="situation" id="marie" autocomplete="off" checked> Marié(e)
+                  <label class="btn btn-secondary mr-sm-2">
+                    <input type="radio" name="situation" id="marie" autocomplete="off"> Marié(e)
                   </label>
                   <label class="btn btn-secondary ml-sm-2">
                     <input type="radio" name="situation" id="pacse" autocomplete="off"> Pacsé(e)
@@ -75,8 +75,8 @@
               <div class="etape-2 tab">
                 <div class="etapes-title">Combien d'enfant avez-vous ?</div>
                 <div class="btn-group btn-group-toggle etapes-radio" data-toggle="buttons">
-                  <label class="btn btn-secondary mr-sm-2 active">
-                    <input type="radio" name="enfant" id="enfant0" autocomplete="off" checked> 0
+                  <label class="btn btn-secondary mr-sm-2">
+                    <input type="radio" name="enfant" id="enfant0" autocomplete="off"> 0
                   </label>
                   <label class="btn btn-secondary ml-sm-2">
                     <input type="radio" name="enfant" id="enfant1" autocomplete="off"> 1
@@ -113,11 +113,11 @@
                   <input type='text' placeholder="Code postal*" name='codePostal' class='form-control mr-sm-3' data-validation="required" data-validation-error-msg="Le code postal est requis" />
                   <input type='email' placeholder="Email*" name='email' class='form-control ml-sm-3' data-validation="email" data-validation-error-msg="L'adresse e-mail n'est pas valide" />
                   <input type='text' placeholder="Téléphone*" name='telephone' class='form-control mr-sm-3' data-validation="required" pattern="^(06|07)[0-9]{8}" data-validation-error-msg="Le numéro du téléphone est requis ou il est incorrect" />
-                  <p class="ml-sm-3">
+                  <p class="ml-sm-3 text-left">
                     Dans un souci de sécurité, vous recevrez un SMS de
                      confirmation. N'oubliez pas de saisir le code à 4 chiffres
                       qui vous sera envoyé.<br />
-                      * Ces champs sont obligatoires
+                      <span>* Ces champs sont obligatoires</span>
                   </p>
                 </div>
                 <div class="d-flex flex-wrap justify-content-around">
@@ -127,8 +127,14 @@
               </div>
               <div class="loading-form-simulateur"><div class="loading-inner"></div></div>
             </form>
-            <span id="prevBtn" class="btn-left-simulation btn-direction-simulation"><img src="img/btn-left.png" alt="arrow left" width="37" height="37"></span>
-            <span id="nextBtn" class="btn-right-simulation btn-direction-simulation"><img src="img/btn-right.png" alt="arrow right" width="37" height="37"></span>
+            <!-- <span id="prevBtn" class="btn-left-simulation btn-direction-simulation"><img src="img/btn-left.png" alt="arrow left" width="37" height="37"></span>
+            <span id="nextBtn" class="btn-right-simulation btn-direction-simulation"><img src="img/btn-right.png" alt="arrow right" width="37" height="37"></span> -->
+            <button id="prevBtn" type="button" class="btn btn-primary btn-retour btn-nav-simulation scale">
+              <i class="fas fa-undo-alt"></i>Retour
+            </button>
+            <button id="nextBtn" type="button" class="btn btn-primary btn-valider btn-nav-simulation scale">
+              <i class="fas fa-check"></i>Valider
+            </button>
           </div>
           <div class="privacy-message">
             Les données personnelles communiquées sont uniquement utilisées pour
