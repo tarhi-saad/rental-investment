@@ -125,9 +125,13 @@ body {
   width: 100%;
 }
 
+.header-top .logo-header-block {
+  width: 206px;
+}
+
 .header-top a .logo-header {
   height: auto;
-  width: 201px;
+  width: 100%;
 }
 
 .header-top .tel-number {

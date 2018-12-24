@@ -2,9 +2,11 @@
   <div class="header-top">
     <div class="container d-flex align-items-center">
       <div class="mr-auto">
-        <a href="/">
-          <img alt="logo confiance invest header" src="img/logo-confiance-header-v3.png" class="logo-header">
-        </a>
+        <div class="logo-header-block">
+          <a href="/">
+            <img alt="logo confiance invest header" src="img/logo-confiance.svg" class="logo-header">
+          </a>
+        </div>
       </div>
       <div class="tel-number d-lg-flex align-items-center">
         <span class="text">Appel<br>gratuit</span><span class="num">N°</span>

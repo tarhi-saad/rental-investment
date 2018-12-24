@@ -1,4 +1,4 @@
-<div class="container page-block">
+<div class="container page-block" id="guideModalBlock">
   <div class="row align-items-lg-center bg-lighter-blue no-gutters">
     <div class="col-lg">
       <div>
